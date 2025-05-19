@@ -54,7 +54,7 @@ layers:
   - {t: /, s: '?'}
   - $$mdi:apple-keyboard-shift$$
   - $$mdi:volume-off$$
-  - {t: '-', s: _}
+  - {t: '`', s: '~'}
   - $$mdi:apple-keyboard-command$$
   - $$mdi:apple-keyboard-option$$
   - {t: '$$mdi:keyboard-space$$', h: layer1}
@@ -260,9 +260,3 @@ layers:
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-combos:
-- p: [26, 39, 55, 24]
-  k: {t: '$$mdi:minus-circle-outline$$', type: none}
-  l: [LAYER0]
-- p: [26, 39, 55, 25]
-  k: {t: '$$mdi:minus-circle-outline$$', type: none}
