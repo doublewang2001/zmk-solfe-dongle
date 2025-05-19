@@ -47,16 +47,31 @@
     behaviors {
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        ctrl+shift+- {
+            bindings = <&none>;
+            key-positions = <26 39 55 24>;
+            layers = <0>;
+        };
+
+        ctrl+shift++ {
+            bindings = <&none>;
+            key-positions = <26 39 55 25>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         layer0 {
             bindings = <
-&kp ESC           &kp N1     &kp N2        &kp N3        &kp N4       &kp N5     &kp UP_ARROW    &kp N6         &kp N7       &kp N8     &kp N9     &kp N0      &kp CAPSLOCK
-&kp TAB           &kp Q      &kp W         &kp E         &kp R        &kp T      &kp DOWN_ARROW  &kp Y          &kp U        &kp I      &kp O      &kp P       &kp BSLH
-&kp LEFT_CONTROL  &kp A      &kp S         &kp D         &kp F        &kp G      &kp BACKSPACE   &kp H          &kp J        &kp K      &kp L      &kp SEMI    &kp APOS
-&kp LSHFT         &kp Z      &kp X         &kp C         &kp V        &kp B      &kp DEL         &kp N          &kp M        &kp COMMA  &kp DOT    &kp FSLH    &kp RIGHT_SHIFT
-&kp C_MUTE        &kp GRAVE  &kp LEFT_GUI  &kp LEFT_ALT  &lt 1 SPACE  &kp DEL    &kp ENTER       &kp BACKSPACE  &lt 2 ENTER  &mo 3      &kp RMETA  &kp K_MENU
+&kp ESC           &kp N1     &kp N2        &kp N3        &kp N4       &kp N5     &kp LS(LC(HOME))  &kp N6         &kp N7       &kp N8     &kp N9     &kp N0     &kp CAPSLOCK
+&kp TAB           &kp Q      &kp W         &kp E         &kp R        &kp T      &kp LS(LC(END))   &kp Y          &kp U        &kp I      &kp O      &kp P      &kp BSLH
+&kp LEFT_CONTROL  &kp A      &kp S         &kp D         &kp F        &kp G      &kp LC(MINUS)     &kp H          &kp J        &kp K      &kp L      &kp SEMI   &kp APOS
+&kp LSHFT         &kp Z      &kp X         &kp C         &kp V        &kp B      &kp LC(PLUS)      &kp N          &kp M        &kp COMMA  &kp DOT    &kp FSLH   &kp RIGHT_SHIFT
+&kp C_MUTE        &kp MINUS  &kp LEFT_GUI  &kp LEFT_ALT  &lt 1 SPACE  &kp DEL    &kp LA(F11)       &kp BACKSPACE  &lt 2 ENTER  &mo 3      &kp RMETA  &kp MINUS
             >;
 
             sensor-bindings = <&inc_dec_kp RIGHT LEFT>;
@@ -85,7 +100,7 @@
 &trans     &trans        &trans          &trans        &trans        &trans          &mkp LCLK        &trans  &trans  &trans      &trans     &trans
             >;
 
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&inc_dec_kp UP_ARROW DOWN_ARROW>;
         };
 
         layer_3 {
